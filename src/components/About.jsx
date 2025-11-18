@@ -24,23 +24,13 @@ const About = () => {
       <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-2 items-center max-w-6xl w-full">
         <div className="flex justify-center relative">
           <div
-            className="absolute lg:left-7 left-10 top-13 bg-yellow-400   
-          w-[5rem] 
-                h-[5rem] 
-                rounded-tl-[120px] 
-                rounded-bl-[120px] 
-                rounded-br-[120px] 
-                border-2 
-                border-white 
-                shadow-lg
-               lg:w-[9rem] 
-                lg:h-[9rem] 
-                lg:rounded-tl-[120px] 
-                lg:rounded-bl-[120px] 
-                lg:rounded-br-[120px] 
-                lg:border-2 
-                lg:border-white 
-                shadow-lg"
+            className="
+              absolute left-10 top-13 bg-yellow-400
+              w-20 h-20
+              rounded-tl-[120px] rounded-bl-[120px] rounded-br-[120px]
+              border-2 border-white shadow-lg
+              lg:left-7 lg:w-36 lg:h-36
+            "
           ></div>
           <img
             src={aboutImg}

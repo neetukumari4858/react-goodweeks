@@ -9,6 +9,7 @@ import SecondSmallImg from "../Images/secondsmall.jpg";
 import ThirdBgImg from "../Images/thirdBig.jpg";
 import ThirdMiddleImg from "../Images/thirdMiddle.jpg";
 import ThirdSmallImg from "../Images/ThirdSmall.jpg";
+import Vector from "../Images/Vector.png";
 
 const slides = [
   {
@@ -57,9 +58,22 @@ const HeroSlider = () => {
           <p className="mt-4 text-gray-300 max-w-md">
             We bring you the finest grooming service with top-notch expertise.
           </p>
-          <button className="mt-6 border border-white-400 px-5 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
-            BOOK NOW
-          </button>
+          <div className="relative inline-block">
+            <button
+              className="mt-6 border border-white px-5 py-2
+              rounded-tl-[25px]
+              rounded-br-[40px]
+              rounded-bl-[25px]
+            "
+            >
+              BOOK NOW
+            </button>
+            <img
+              src={Vector}
+              alt="icon"
+              className="absolute lg:top-13. top-12 right-1  w-5 h-5 rotate-35 text-white"
+            />
+          </div>
         </div>
 
         {/* RIGHT IMAGE SLIDER */}
@@ -70,7 +84,6 @@ const HeroSlider = () => {
             alt="big"
             className="relative top-[3rem] lg:top-4 w-[350px] h-[230px] lg:w-[550px] lg:h-[430px] object-cover shadow-xl"
           />
-
           {/* MEDIUM IMAGE */}
           <div className="flex gap-2 relative lg:top-[-21rem] top-[-10rem]">
             <img
@@ -80,7 +93,6 @@ const HeroSlider = () => {
             />
             <div className="w-[6rem] h-[7.6rem] lg:w-[9rem] lg:h-[16rem] rounded-bl-[120px] rounded-tr-[120px] rounded-br-[120px] border-2 border-white shadow-lg"></div>
           </div>
-
           {/* SMALL IMAGE */}
           <div className="relative top-[-30rem] left-[-11rem]">
             <img
@@ -103,7 +115,6 @@ const HeroSlider = () => {
       </div>
 
       {/* PAGINATION (LEFT SIDE) */}
-
       <div className="relative lg:top-[-10rem] pl-20 lg:pl-[8rem] -translate-y-1/2 z-20 flex items-center gap-4">
         {/* PREV */}
         <button
@@ -112,13 +123,11 @@ const HeroSlider = () => {
         >
           <ChevronLeft size={28} />
         </button>
-
         {/* NUMBERING */}
         <div className="text-gray-300 text-3xl font-bold text-center">
           {String(index + 1).padStart(2, "0")}/
           <span className="text-yellow-400 ">{slides.length}</span>
         </div>
-
         {/* NEXT */}
         <button
           onClick={nextSlide}

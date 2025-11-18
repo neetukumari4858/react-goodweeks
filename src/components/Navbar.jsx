@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../Images/logo.png";
 import scissorIcon from "../Images/scissor.png";
-
+import Vector from "../Images/Vector.png";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
@@ -37,15 +37,28 @@ const Navbar = () => {
 
             {/* Show scissor image only when active */}
             {activeTab === item && (
-              <img src={scissorIcon} alt="icon" className="w-4 h-4" />
+              <img src={scissorIcon} alt="icon" className="w-4 h-3" />
             )}
           </li>
         ))}
       </ul>
-
-      <button className="hidden md:block border border-white-400 px-5 py-2 rounded-full hover:bg-yellow-400 hover:text-black transition">
-        BOOK NOW
-      </button>
+      <div className="relative inline-block">
+        {/* Button */}
+        <button
+          className="hidden md:block border border-white px-5 py-2
+            rounded-tl-[25px]
+            rounded-br-[40px]
+            rounded-bl-[25px]
+          "
+        >
+          BOOK NOW
+        </button>
+        <img
+          src={Vector}
+          alt="icon"
+          className="absolute top-7  right-2 w-5 h-5 rotate-35 text-white"
+        />
+      </div>
 
       {/* Mobile Toggle */}
       <div className="md:hidden text-3xl" onClick={() => setOpen(!open)}>
@@ -69,15 +82,28 @@ const Navbar = () => {
             >
               {item.charAt(0).toUpperCase() + item.slice(1)}
               {activeTab === item && (
-                <img src={scissorIcon} alt="icon" className="w-4 h-4" />
+                <img src={scissorIcon} alt="icon" className="w-4 h-3" />
               )}
             </li>
           ))}
         </ul>
-
-        <button className="mt-4 border border-white-400 px-5 py-2 rounded-full">
-          BOOK NOW
-        </button>
+        <div className="relative inline-block">
+          {/* Button */}
+          <button
+            className="mt-4 border border-white px-5 py-2
+            rounded-tl-[25px]
+            rounded-br-[40px]
+            rounded-bl-[25px]
+          "
+          >
+            BOOK NOW
+          </button>
+          <img
+            src={Vector}
+            alt="icon"
+            className="absolute lg:top-7 top-11 right-2 w-5 h-5 rotate-35 text-white"
+          />
+        </div>
       </div>
     </nav>
   );
